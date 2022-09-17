@@ -19,4 +19,9 @@ public class StudentService {
 		return dao.findAll();
 	}
 	
+	
+	public Student addStudent(Student student)
+	{
+		return dao.save(student);
+	}
 }

@@ -28,7 +28,7 @@ public class Student {
 	private String lastName;
 	
 	@Column(name = "email_id")
-	private String mail;
+	private String email;
 	
 	@Column(name = "mobile_no")
 	private Integer mobileNo;
@@ -69,11 +69,11 @@ public class Student {
 	}
 
 	public String getMail() {
-		return mail;
+		return email;
 	}
 
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setMail(String email) {
+		this.email = email;
 	}
 
 	public Integer getMobileNo() {
