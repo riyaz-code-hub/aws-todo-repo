@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,10 +30,22 @@ public class StudentController {
 		return service.getAllStudent();
 	}
 	
+	@GetMapping(value = "/id/{studentId}")
+	public Student getAllStudent(@PathVariable("studentId") Long studentId)
+	{
+		return service.getStudent(studentId);
+	}
+	
 	@PostMapping(value = "/add")
 	public Student addStudent(@RequestBody Student student)
 	{		
 		return service.addStudent(student);
+	}
+	
+	@DeleteMapping(value = "/delete/{studentId}")
+	public Student deleteStudent(@PathVariable("studentId") Long studentId)
+	{
+		return service.deleteStudent(studentId);
 	}
 	
 }

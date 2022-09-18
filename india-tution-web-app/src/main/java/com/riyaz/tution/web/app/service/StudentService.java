@@ -1,6 +1,7 @@
 package com.riyaz.tution.web.app.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,5 +24,17 @@ public class StudentService {
 	public Student addStudent(Student student)
 	{
 		return dao.save(student);
+	}
+	
+	public Student deleteStudent(Long studentId)
+	{
+		Student student=getStudent(studentId);
+		dao.delete(student);
+		return student;
+	}
+	
+	public Student getStudent(Long studentId)
+	{
+		return dao.findById(studentId).get();
 	}
 }
