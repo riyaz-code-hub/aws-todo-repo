@@ -1,0 +1,29 @@
+<h1>Student List</h1><br>
+<div class="alert alert-success" ></div>
+<div class="container">
+<table border="1">
+    <thead>
+<tr> <th>Student ID</th>
+    <th>First Name</th>
+    <th>Middle Name</th>
+    <th>Last Name</th>
+    <th>Email ID</th>
+    <th>Mobile No</th>
+    <th>DOB</th>
+</tr>
+</thead>
+<tbody *ngFor="let student of studentList">
+<tr> <td>{{student.studentId}}</td>
+    <td>{{student.firstName}}</td>
+    <td>{{student.middleName}}</td>
+    <td>{{student.lastName}}</td>
+    <td>{{student.email}}</td>
+    <td>{{student.mobileNo}}</td>
+    <td>{{student.dob | date}}</td>
+    <td><button  class="btn btn-danger"> delete</button> </td>
+    <td><button  class="btn btn-success"> update</button> </td>
+</tr>
+</tbody> 
+</table>
+</div>
+
