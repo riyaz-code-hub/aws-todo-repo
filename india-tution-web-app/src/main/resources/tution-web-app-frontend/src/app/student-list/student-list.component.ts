@@ -28,4 +28,15 @@ export class StudentListComponent implements OnInit {
     )
   }
 
+  deleteStudent(studentId:number)
+  {
+    console.log(studentId);
+    this.service.deleteStudent(studentId)
+    .subscribe(
+      response =>{
+        this.refreshStudentList();
+      }
+    )
+  }
+
 }

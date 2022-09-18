@@ -14,4 +14,14 @@ export class StudentService {
   return this.http.get<Student[]>('http://localhost:9191/student/all');
  }
 
+ deleteStudent(studentId:number)
+ {
+  return this.http.delete('http://localhost:9191/student/delete/id/${studentId}');
+ }
+
+ saveStudentData(student:Student)
+ {
+  return this.http.post('http://localhost:9191/student/add',student);
+ }
+
 }

@@ -1,0 +1,70 @@
+<div class="container">
+    <H1>Student Registration</H1>
+    <!-- <div class="alert alert-warning" *ngIf="todoForm.invalid && todoForm.dirty">Please enter the required fields</div> -->
+    <form  (ngSubmit)="saveStudent()">
+      <fieldset>
+        <label>First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="student.firstName"
+          name="firstName"         
+        />       
+      </fieldset>
+
+      <fieldset>
+        <label>Middle Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="student.middleName"
+          name="middleName"         
+        />       
+      </fieldset>
+
+      <fieldset>
+        <label>Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="student.lastName"
+          name="lastName"         
+        />       
+      </fieldset>
+
+      <fieldset>
+        <label>Email ID</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="student.email"
+          name="email"         
+        />       
+      </fieldset>
+
+      <fieldset>
+        <label>Mobile</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="student.mobileNo"
+          name="mobileNo"         
+        />       
+      </fieldset>
+
+      <fieldset>
+        <label>DOB</label>
+        <input
+          type="date"
+          class="form-control"
+          #targetdate="ngModel"
+          [ngModel]="student.dob | date: 'yyyy-MM-dd'"          
+          name="dob"          
+        />        
+      </fieldset>
+
+      <button type="submit" class="btn btn-success">Save</button>
+    </form>
+  </div>
+  >
+  

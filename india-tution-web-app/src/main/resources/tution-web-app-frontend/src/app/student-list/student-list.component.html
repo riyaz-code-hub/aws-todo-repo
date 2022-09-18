@@ -20,7 +20,7 @@
     <td>{{student.email}}</td>
     <td>{{student.mobileNo}}</td>
     <td>{{student.dob | date}}</td>
-    <td><button  class="btn btn-danger"> delete</button> </td>
+    <td><button  class="btn btn-danger" (click)="deleteStudent(student.studentId)" > delete</button> </td>
     <td><button  class="btn btn-success"> update</button> </td>
 </tr>
 </tbody> 
